@@ -5,6 +5,7 @@ import RoleList from './pages/roles/RoleList'
 import CreateRole from './pages/roles/CreateRole'
 import EditRole from './pages/roles/EditRole'
 import UserList from './pages/users/UserList'
+import CreateUser from './pages/users/CreateUser'
 
 
 
@@ -18,12 +19,13 @@ function App() {
         <Routes>
           <Route path="/" element={<Layout/>}>
              
-             <Route path='/roleList' element={<RoleList/>} />
-             <Route path='/createRole' element={<CreateRole/>} />
-             <Route path='/editRole' element={<EditRole/>} />
+             <Route path='/role' element={<RoleList/>} />
+             <Route path='/role/create' element={<CreateRole/>} />
+             <Route path='/role/edit:id' element={<EditRole/>} />
 
              
-             <Route path='/userlist' element={<UserList/>} />
+             <Route path='/user' element={<UserList/>} />
+             <Route path='/user/create' element={<CreateUser/>} />
 
              
           </Route>
